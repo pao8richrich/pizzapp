@@ -1,28 +1,52 @@
 import React from 'react';
 import {Form, Button } from 'react-bootstrap';
 
-function PizzaCounter() {
+const PizzaCounter = ({counter,slice,totalPizza,countHandler,sliceHandler,clearHandler,averageHandler}) => {
+
   return (
     <Form>
         <div className="TitleCard">Calcula tu pizza</div>
         <Form.Group controlId="exampleForm.ControlSelect1">
-        <Form.Label>invitados</Form.Label>
+        <Form.Label>Tamaño de la pizza</Form.Label>
         <Form.Control as="select">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
+          <option>Pequeña</option>
+          <option>Mediana</option>
+          <option>Grande</option>
+          <option>Extra Grande</option>
         </Form.Control>
+      </Form.Group>
+        <Form.Group >
+          <Form.Label>Invitados</Form.Label>
+          <Form.Control 
+            type="number" 
+            placeholder="Cantidad " 
+            value={counter}
+            onChange={countHandler} 
+            
+          />
         </Form.Group>
 
-        <Form.Group controlId="formBasicPassword">
+        <Form.Group >
         <Form.Label>Cantidad por persona</Form.Label>
-        <Form.Control type="text" placeholder="Cantidad " />
+        <Form.Control 
+        type="number" 
+        placeholder="Cantidad " 
+        value={slice}
+        onChange={sliceHandler}
+        />
         </Form.Group>
-        <div className="titleResult">Necesitaras en total <span>5 pizzas</span></div>
-        <Button variant="primary" type="submit">
-        Borrar
+        <div className="titleResult">Necesitaras en total <span>{totalPizza} pizzas</span></div>
+        <Button 
+          variant="primary" 
+          type="submit" 
+          onClick={averageHandler}>
+          Calcular
+        </Button>
+        <Button 
+        variant="primary" 
+        type="submit" 
+        onClick={clearHandler}>
+        Reset
         </Button>
   </Form>
   );

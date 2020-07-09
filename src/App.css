@@ -86,6 +86,7 @@ label{
 }
 .btn-primary {
   color: #fff;
+  margin-left: 20px;
   background-color: #4b6a22 !important;
   border-color: #4b6a22!important;
 }
