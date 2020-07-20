@@ -1,0 +1,107 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.containerAll {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.33), rgb(255, 255, 255)), url(./img/Madera.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  border-bottom: 10px solid #5b9447;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.Title {
+  font-size: 5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #ffc100;
+}
+.card{
+  padding: 2rem;
+  margin-top: 52px;
+  background-color: #dace3759 !important;
+  border: 0px solid rgba(0,0,0,.125) !important;
+}
+label{
+  color: #635911;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.TitleCard{
+  color: #635912;
+  text-transform: uppercase;
+  border-bottom: 3px solid white;
+  padding-bottom: 8px;
+  margin-bottom: 13px;
+  font-weight: 800;
+}
+.titleResult{
+  color: #541e16;
+    font-size: 20px;
+    text-transform: inherit;
+    font-weight: 300;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+.titleResult span{
+ 
+ text-transform: uppercase;
+ color: #541e16;
+ font-size: 27px;
+ font-weight: 500;
+
+}
+.btn-primary {
+  color: #fff;
+  margin-left: 20px;
+  background-color: #4b6a22 !important;
+  border-color: #4b6a22!important;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #3a5417!important;
+  border-color: #3a5417!important;
+}
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(19, 78, 44, 0.5) !important;
+}
+
+.sabor{
+  color: #9f3c41;
+  font-size: 19px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
