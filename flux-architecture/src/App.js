@@ -79,8 +79,7 @@ class Pizza extends Component{
                     <Form.Control 
                       type="number" 
                       placeholder="Cantidad " 
-                      onChange={this.countHandler} 
-                      
+                      onChange={this.countHandler}
                     />
                   </Form.Group>
     
