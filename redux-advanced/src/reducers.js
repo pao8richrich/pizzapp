@@ -1,9 +1,9 @@
-// import SIZE_SLICE from "./actions";
-// import COUNT from "./actions";
-// import SLICE from "./actions";
-// import AVERAGE from "./actions";
-// import CLEAR from "./actions";
-import {SIZE_SLICE,COUNT, SLICE,AVERAGE ,CLEAR} from "./actions";
+
+export const SIZE_SLICE = "SIZE_SLICE";
+export const COUNT = "COUNT";
+export const SLICE = "SLICE";
+export const AVERAGE = "AVERAGE"; 
+export const CLEAR = "CLEAR";
 
 const initialState = {
     totalPizza: 0,
@@ -12,34 +12,41 @@ const initialState = {
     slice:0
 };
 
-const Pizza = {
+const PizzaContainer = {
     ...initialState
 };
 
-function pizzaReducer (state=initialState,action){
-    if (action.type === "SIZE_SLICE") {
+function pizzaReducer (state=initialState,actions){
+    if (actions.type === "SIZE_SLICE") {
+        console.log("SIZE_SLICE",actions.value)
        return{
-        sizeSlice: action.value
+        ...state, sizeSlice: actions.value
+        
        };
     }
-    if (action.type === "COUNT") {
+    if (actions.type === "COUNT") {
+        console.log("COUNT",actions.value)
        return{
-        count : action.value
+        ...state, count : actions.value
        };
     }
-    if (action.type === "SLICE") {
+    if (actions.type === "SLICE") {
+        console.log("SLICE",actions.value)
         return{
-            slice : action.value
+        ...state, slice : actions.value
         };
     }
-    if (action.type === "AVERAGE") {
+    if (actions.type === "AVERAGE") {
+        console.log("AVERAGE",actions.value)
         return{
-            totalPizza: Math.ceil((state.count * state.slice) /state.sizeSlice)
+            ...state, totalPizza: Math.ceil((state.count * state.slice) /state.sizeSlice)
         };
     }
-    if (action.type === "CLEAR") {
+    if (actions.type === "CLEAR") {
+        console.log("CLEAR",actions.value)
         return{
-            Pizza : { ...initialState }
+             ...initialState 
+            // PizzaContainer : { ...initialState }
         };
     }
     return state

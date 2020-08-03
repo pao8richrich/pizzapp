@@ -6,19 +6,19 @@ export const CLEAR = "CLEAR";
 
 
 export function sizeSlice (value) {
-  return{type:SIZE_SLICE,value:value}
+  return{type:SIZE_SLICE,value}
 }
 
 export function count (value) {
-  return{type:COUNT,value:value}
+  return{type:COUNT,value}
 }
 
 export function slice (value) {
-  return{type:SLICE,value:value}
+  return{type:SLICE,value}
 }
 
 export function average (value) {
-  return{type:AVERAGE,value:value}
+  return{type:AVERAGE,value}
 }
 
 export function clear () {
